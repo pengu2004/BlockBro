@@ -5,7 +5,7 @@ import psutil
 # configure
 BROWSERS = ["chrome", "chrome.exe", "firefox", "firefox.exe",
             "msedge", "msedge.exe", "brave", "brave.exe", "opera", "opera.exe", "safari","comet"]
-EMERGENCY_FILE = r"C:\allow_browsing" if os.name == "nt" else "/tmp/allow_browsing"
+EMERGENCY_FILE = r"C:\allow_browsing" if os.name == "nt" else "/tmp/allowbrowsing"
 
 def kill_browser_procs():
     killed = []
@@ -37,6 +37,6 @@ def main(minutes):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python minimal_blocker.py <minutes>")
+        print("Usage: python blocker.py <minutes>")
         sys.exit(1)
     main(int(sys.argv[1]))
